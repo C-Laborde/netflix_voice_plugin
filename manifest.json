@@ -8,5 +8,8 @@
         "matches": ["*://www.netflix.com/watch/*"],
         "js": ["content.js"]
       }
-    ]
+    ],
+    "background":{
+        "scripts": ["background.js"]
+    }
   }
