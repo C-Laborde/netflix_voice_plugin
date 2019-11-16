@@ -1,0 +1,12 @@
+  {
+    "name": "Lazy Speech Recognition",
+    "version": "1.0",
+    "description": "Speech Recognition plugin to skip to the next episode on Netflix",
+    "manifest_version": 2,
+    "content_scripts": [
+      {
+        "matches": ["*://www.netflix.com/watch/*"],
+        "js": ["content.js"]
+      }
+    ]
+  }
