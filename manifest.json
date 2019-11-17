@@ -1,5 +1,5 @@
   {
-    "name": "Lazy Speech Recognition",
+    "name": "Lazy Watch - Speech Recognition",
     "version": "1.0",
     "description": "Speech Recognition plugin to skip to the next episode on Netflix",
     "manifest_version": 2,
@@ -10,6 +10,19 @@
       }
     ],
     "background":{
-        "scripts": ["background.js"]
-    }
+        "scripts": ["auto-trigger.js"],
+        "persistent": false
+    },
+    "page_action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+              "16": "images/img16.png",
+              "48": "images/img48.png"
+        }
+    },
+    "icons": {
+        "16": "images/img16.png",
+        "48": "images/img48.png"
+    },
+    "options_page": "options.html"
   }
