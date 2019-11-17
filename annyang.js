@@ -1,5 +1,5 @@
-<script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
-<script>
+// <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+
 if (annyang) {
   // Let's define a command.
   var commands = {
@@ -12,4 +12,3 @@ if (annyang) {
   // Start listening.
   annyang.start();
 }
-</script>
