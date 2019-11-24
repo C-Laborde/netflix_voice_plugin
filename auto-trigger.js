@@ -1,24 +1,23 @@
 // --enable-blink-features=GetUserMedia
 setTimeout(() => {
-  navigator.permissions.query({name:'microphone'}).then(function(result) {
-      if (result.state == 'granted') {
-          console.log("Granted")
-      } else if (result.state == 'prompt') {
-          console.log("Prompt")
-      } else if (result.state == 'denied') {
-          console.log("Denied")
-      }
-      });
+  navigator.permissions
+    .query({ name: 'microphone' })
+    .then(function (result) {
+      console.log(result.state)
+    })
+    .catch(function (exc) {
+      console.log(exc)
+    });
 
-    navigator.mediaDevices.getUserMedia({audio: true})
+  navigator.mediaDevices.getUserMedia({audio: true})
     .then(function(stream){
         console.log("Streaming!")
     })
-    .catch(function() {
+    .catch(function(err) {
         // chrome.tabs.create({
         //     url: chrome.extension.getURL("options.html"),
         //     selected: true
         // })
-        console.log("GetUserMedia not working")
+        console.log("GetUserMedia not working", err)
     });
 }, 1000);
