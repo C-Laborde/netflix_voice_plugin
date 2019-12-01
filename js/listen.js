@@ -167,6 +167,16 @@ if (annyang) {
       'hello': function() { console.log(
           "Hello World!!"
       ); },
+      'next': function(){
+        var website = 'netflix';
+        console.log(website);
+          chrome.tabs.create({
+            url: "https://"+website+".com",
+            selected: true
+          });
+          speechWrapper(["Opening..", website]);
+          annyang.resume();
+        },
     'show me *website': function(website){
       console.log(website);
         chrome.tabs.create({
