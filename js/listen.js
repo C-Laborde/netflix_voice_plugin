@@ -177,6 +177,16 @@ if (annyang) {
           speechWrapper(["Opening..", website]);
           annyang.resume();
         },
+        'skip': function(){
+          var website = 'netflix';
+          // console.log(website);
+          //   chrome.tabs.create({
+          //     url: "https://"+website+".com",
+          //     selected: true
+          //   });
+          //   speechWrapper(["Opening..", website]);
+            annyang.resume();
+          },
     'show me *website': function(website){
       console.log(website);
         chrome.tabs.create({

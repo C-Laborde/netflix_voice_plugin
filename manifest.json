@@ -6,7 +6,6 @@
   "description": "A voice-based assistant that reads website content out loud and navigates to other web pages.",
   "version": "1.3.3",
   "default_locale": "en",
-
   "browser_action": {
     "default_icon": "img/icon.png",
     "default_popup": "popup.html"
@@ -28,6 +27,10 @@
   "content_security_policy": "script-src 'self'; object-src 'self'",
   "web_accessible_resources": [
   ],
+  "content_scripts": [{
+    "matches": ["*://www.netflix.com/*"],
+    "js": ["content.js"]
+  }],
   "background": {
     "scripts": [
       "js/es6-promise.auto.min.js",
