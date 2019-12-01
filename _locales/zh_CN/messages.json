@@ -1,0 +1,62 @@
+{
+  "extension_name": {
+    "message": "TalkToMe: 文本语音朗读助理"
+  },
+  "extension_short_name": {
+    "message": "TalkToMe"
+  },
+  "extension_description": {
+    "message": "轻轻点击，即可为您朗读页面上的文本。（现正支援超过 40 种以上语言）"
+  },
+  "options_heading": {
+    "message": "选项"
+  },
+  "options_voice_label": {
+    "message": "朗读语音"
+  },
+  "options_voicegroup_standard": {
+    "message": "标准的声音"
+  },
+  "options_voicegroup_premium": {
+    "message": "优质的声音"
+  },
+  "options_rate_label": {
+    "message": "朗读速度"
+  },
+  "options_rate_warning": {
+    "message": "注意：有些声音可能无法高速运行。"
+  },
+  "options_pitch_label": {
+    "message": "朗读音调"
+  },
+  "options_volume_label": {
+    "message": "朗读音量"
+  },
+  "options_show_highlighting": {
+    "message": "标示朗读文本"
+  },
+  "options_hotkeys_link": {
+    "message": "编辑快捷键"
+  },
+  "options_save_button": {
+    "message": "储存"
+  },
+  "options_reset_button": {
+    "message": "重设"
+  },
+  "options_success_status": {
+    "message": "已储存。"
+  },
+  "context_read_selection": {
+    "message": "朗读所选文本"
+  },
+  "error_no_voice": {
+    "message": "不支持语言 '{lang}'"
+  },
+  "languages_heading": {
+    "message": "选择语言"
+  },
+  "languages_back_button": {
+    "message": "返回选项"
+  }
+}

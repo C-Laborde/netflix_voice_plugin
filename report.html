@@ -1,0 +1,35 @@
+<!DOCTYPE>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Report Issues</title>
+  <link rel="stylesheet" type="text/css" href="css/report.css">
+
+  <script src="js/es6-promise.auto.min.js"></script>
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="js/defaults.js"></script>
+  <script src="js/report.js"></script>
+</head>
+<body>
+  <div class="container">
+  <h1>Report Issue</h1>
+
+  <div class="label">I was reading this URL</div>
+  <input id="txt-url" type="text" maxlength="500" />
+
+  <div class="label">This issue occurs</div>
+  <textarea id="txt-comment" rows="3" maxlength="1000"></textarea>
+  <div class="note">
+    Please include your email if you wish to follow up.
+  </div>
+
+  <div class="label"></div>
+  <input id="btn-submit" type="button" value="Submit" />
+  <img id="img-spinner" src="img/loading.gif" />
+
+  <div class="label"></div>
+  <div id="lbl-status"></div>
+  </div>
+</body>
+</html>

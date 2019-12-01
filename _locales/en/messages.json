@@ -1,0 +1,62 @@
+{
+  "extension_name": {
+    "message": "TalkToMe: A Text to Speech Voice Reader"
+  },
+  "extension_short_name": {
+    "message": "TalkToMe"
+  },
+  "extension_description": {
+    "message": "Read out loud the current web-page article with one click. Supports 40+ languages."
+  },
+  "options_heading": {
+    "message": "Options"
+  },
+  "options_voice_label": {
+    "message": "Voice"
+  },
+  "options_voicegroup_standard": {
+    "message": "Standard Voices"
+  },
+  "options_voicegroup_premium": {
+    "message": "Premium Voices"
+  },
+  "options_rate_label": {
+    "message": "Speed"
+  },
+  "options_rate_warning": {
+    "message": "Note: some voices may not work at a high speed."
+  },
+  "options_pitch_label": {
+    "message": "Pitch"
+  },
+  "options_volume_label": {
+    "message": "Volume"
+  },
+  "options_show_highlighting": {
+    "message": "Text Highlighting"
+  },
+  "options_hotkeys_link": {
+    "message": "Edit shortcut keys"
+  },
+  "options_save_button": {
+    "message": "Save"
+  },
+  "options_reset_button": {
+    "message": "Reset"
+  },
+  "options_success_status": {
+    "message": "Changes saved."
+  },
+  "context_read_selection": {
+    "message": "TalkToMe selected text"
+  },
+  "error_no_voice": {
+    "message": "Language not supported '{lang}'"
+  },
+  "languages_heading": {
+    "message": "Select Languages"
+  },
+  "languages_back_button": {
+    "message": "Back to Options"
+  }
+}
