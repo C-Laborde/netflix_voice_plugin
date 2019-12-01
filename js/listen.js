@@ -178,7 +178,12 @@ if (annyang) {
           annyang.resume();
         },
         'skip': function(){
-          var website = 'netflix';
+          console.log('SKIP')
+          chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+            chrome.tabs.sendMessage(tabs[0].id, {greeting: "hello"}, function(response) {
+              console.log(response.farewell);
+            });
+          });
           // console.log(website);
           //   chrome.tabs.create({
           //     url: "https://"+website+".com",
