@@ -1,0 +1,62 @@
+{
+  "extension_name": {
+    "message": "Đọc Cho Tôi Nghe"
+  },
+  "extension_short_name": {
+    "message": "Đọc Tui Nghe"
+  },
+  "extension_description": {
+    "message": "Đọc nghe nội dung trang web - tiếng Anh và Việt. Dùng nghe đọc tin tức, truyện online. Giọng đọc hay, tiện ích dễ xài."
+  },
+  "options_heading": {
+    "message": "Tùy Chọn"
+  },
+  "options_voice_label": {
+    "message": "Giọng đọc"
+  },
+  "options_voicegroup_standard": {
+    "message": "Các giọng chuẩn"
+  },
+  "options_voicegroup_premium": {
+    "message": "Các giọng chất lượng cao"
+  },
+  "options_rate_label": {
+    "message": "Tốc độ đọc"
+  },
+  "options_rate_warning": {
+    "message": "Lưu ý: một số tiếng nói có thể không hoạt động ở tốc độ cao."
+  },
+  "options_pitch_label": {
+    "message": "Giọng cao/thấp"
+  },
+  "options_volume_label": {
+    "message": "Volume"
+  },
+  "options_show_highlighting": {
+    "message": "Highlight câu đang đọc"
+  },
+  "options_hotkeys_link": {
+    "message": "Chỉnh sửa phím tắt"
+  },
+  "options_save_button": {
+    "message": "Lưu"
+  },
+  "options_reset_button": {
+    "message": "Reset"
+  },
+  "options_success_status": {
+    "message": "Đã lưu lại."
+  },
+  "context_read_selection": {
+    "message": "Đọc"
+  },
+  "error_no_voice": {
+    "message": "Ngôn ngữ không được hỗ trợ '{lang}'"
+  },
+  "languages_heading": {
+    "message": "Chọn ngôn ngữ"
+  },
+  "languages_back_button": {
+    "message": "Trở về"
+  }
+}

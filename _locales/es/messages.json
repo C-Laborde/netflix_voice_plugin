@@ -1,0 +1,62 @@
+{
+  "extension_name": {
+    "message": "Texto A Voz"
+  },
+  "extension_short_name": {
+    "message": "Texto A Voz"
+  },
+  "extension_description": {
+    "message": "Lea en voz alta el artículo actual con un solo clic."
+  },
+  "options_heading": {
+    "message": "Configuración"
+  },
+  "options_voice_label": {
+    "message": "Voz"
+  },
+  "options_voicegroup_standard": {
+    "message": "Voces Estándar"
+  },
+  "options_voicegroup_premium": {
+    "message": "Voces Premium"
+  },
+  "options_rate_label": {
+    "message": "Velocidad"
+  },
+  "options_rate_warning": {
+    "message": "Nota: algunas voces pueden no funcionar a alta velocidad."
+  },
+  "options_pitch_label": {
+    "message": "Tono"
+  },
+  "options_volume_label": {
+    "message": "Volumen"
+  },
+  "options_show_highlighting": {
+    "message": "Resaltado De Texto"
+  },
+  "options_hotkeys_link": {
+    "message": "Editar teclas de acceso directo"
+  },
+  "options_save_button": {
+    "message": "Guardar"
+  },
+  "options_reset_button": {
+    "message": "Reiniciar"
+  },
+  "options_success_status": {
+    "message": "Cambios guardados."
+  },
+  "context_read_selection": {
+    "message": "Leer en voz alta el texto seleccionado"
+  },
+  "error_no_voice": {
+    "message": "Idioma no admitido '{lang}'"
+  },
+  "languages_heading": {
+    "message": "Seleccionar idiomas"
+  },
+  "languages_back_button": {
+    "message": "Volver a la configuración"
+  }
+}
