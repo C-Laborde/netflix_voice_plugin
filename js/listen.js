@@ -201,51 +201,6 @@ if (annyang) {
         speechWrapper(["Opening..", website]);
         annyang.resume();
       },
-      'bring me to *website': function(website){
-        console.log(website);
-        chrome.tabs.create({
-          url: "https://"+website+".com",
-          selected: true
-        });
-        speechWrapper(["Opening..", website]);
-        annyang.resume();
-      },
-      'take me to *website': function(website){
-          console.log(website);
-          chrome.tabs.create({
-            url: "https://"+website+".com",
-            selected: true
-          });
-          speechWrapper(["Opening..", website]);
-          annyang.resume();
-      },
-      'open *website': function(website){
-          console.log(website);
-          chrome.tabs.create({
-            url: "https://"+website+".com",
-            selected: true
-          });
-          speechWrapper(["Opening..", website]);
-          annyang.resume();
-      },
-      'navigate to *website': function(website){
-        console.log(website);
-        chrome.tabs.create({
-          url: "https://"+website+".com",
-          selected: true
-        });
-        speechWrapper(["Opening..", website]);
-        annyang.resume();
-      },
-      'search *item': function(item) {
-        console.log(item);
-        chrome.tabs.create({
-          url: "https://www.google.com/search?q=" + item,
-          selected: true
-        });
-        speechWrapper(["Searching for..", item]);
-        annyang.resume();
-      },
       'tell me what you can do': function() {
         console.log("explaining features");
         speechWrapper(["To read the entire webpage, say Read everything. To read categorized webpage content,\
