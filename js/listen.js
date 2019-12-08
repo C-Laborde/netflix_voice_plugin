@@ -168,13 +168,12 @@ if (annyang) {
           "Hello World!!"
       ); },
       'next': function(){
-        var website = 'netflix';
-        console.log(website);
-          chrome.tabs.create({
-            url: "https://"+website+".com",
-            selected: true
+        console.log('NEXT')
+        chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+          chrome.tabs.sendMessage(tabs[0].id, {greeting: "next"}, function(response) {
+            console.log(response.farewell);
           });
-          speechWrapper(["Opening..", website]);
+        });
           annyang.resume();
         },
         'skip': function(){
@@ -272,46 +271,46 @@ if (annyang) {
     console.log(annyang.isListening());
 
     // read everything
-    function updateButtons() {
-      return getBackgroundPage().then(function(master) {
-        return Promise.all([
-          getSettings(),
-          master.getPlaybackState(),
-          master.getActiveSpeech()
-        ])
-      })
-      .then(spread(function(settings, state, speech) {
-        $("#imgLoading").toggle(state == "LOADING");
-        $("#btnSettings").toggle(state == "STOPPED");
-        $("#btnPlay").toggle(state == "PAUSED" || state == "STOPPED");
-        $("#btnPause").toggle(state == "PLAYING");
-        $("#btnStop").toggle(state == "PAUSED" || state == "PLAYING" || state == "LOADING");
-        $("#btnForward, #btnRewind").toggle(state == "PLAYING");
-        $("#attribution").toggle(Boolean(speech && isGoogleTranslate(speech.options.voice.voiceName)));
-        $("#highlight, #resize").toggle(Boolean(settings.showHighlighting != null ? settings.showHighlighting : defaults.showHighlighting) && (state == "PAUSED" || state == "PLAYING"));
-
-        if (settings.showHighlighting && speech) {
-          var pos = speech.getPosition();
-          var elem = $("#highlight");
-          if (elem.data("texts") != pos.texts) {
-            elem.data({texts: pos.texts, index: -1});
-            elem.empty();
-            for (var i=0; i<pos.texts.length; i++) {
-              var html = escapeHtml(pos.texts[i]).replace(/\r?\n/g, "<br/>");
-              $("<span>").html(html).appendTo(elem);
-            }
-          }
-          if (elem.data("index") != pos.index) {
-            elem.data("index", pos.index);
-            elem.children(".active").removeClass("active");
-            var child = elem.children().eq(pos.index).addClass("active");
-            if (child.length) {
-            var childTop = child.position().top;
-            var childBottom = childTop + child.outerHeight();
-            if (childTop < 0 || childBottom >= elem.height()) elem.animate({scrollTop: elem[0].scrollTop + childTop - 10});
-            }
-          }
-        }
-      }));
-    }
+    // function updateButtons() {
+    //   return getBackgroundPage().then(function(master) {
+    //     return Promise.all([
+    //       getSettings(),
+    //       master.getPlaybackState(),
+    //       master.getActiveSpeech()
+    //     ])
+    //   })
+    //   .then(spread(function(settings, state, speech) {
+    //     $("#imgLoading").toggle(state == "LOADING");
+    //     $("#btnSettings").toggle(state == "STOPPED");
+    //     $("#btnPlay").toggle(state == "PAUSED" || state == "STOPPED");
+    //     $("#btnPause").toggle(state == "PLAYING");
+    //     $("#btnStop").toggle(state == "PAUSED" || state == "PLAYING" || state == "LOADING");
+    //     $("#btnForward, #btnRewind").toggle(state == "PLAYING");
+    //     $("#attribution").toggle(Boolean(speech && isGoogleTranslate(speech.options.voice.voiceName)));
+    //     $("#highlight, #resize").toggle(Boolean(settings.showHighlighting != null ? settings.showHighlighting : defaults.showHighlighting) && (state == "PAUSED" || state == "PLAYING"));
+    //
+    //     if (settings.showHighlighting && speech) {
+    //       var pos = speech.getPosition();
+    //       var elem = $("#highlight");
+    //       if (elem.data("texts") != pos.texts) {
+    //         elem.data({texts: pos.texts, index: -1});
+    //         elem.empty();
+    //         for (var i=0; i<pos.texts.length; i++) {
+    //           var html = escapeHtml(pos.texts[i]).replace(/\r?\n/g, "<br/>");
+    //           $("<span>").html(html).appendTo(elem);
+    //         }
+    //       }
+    //       if (elem.data("index") != pos.index) {
+    //         elem.data("index", pos.index);
+    //         elem.children(".active").removeClass("active");
+    //         var child = elem.children().eq(pos.index).addClass("active");
+    //         if (child.length) {
+    //         var childTop = child.position().top;
+    //         var childBottom = childTop + child.outerHeight();
+    //         if (childTop < 0 || childBottom >= elem.height()) elem.animate({scrollTop: elem[0].scrollTop + childTop - 10});
+    //         }
+    //       }
+    //     }
+    //   }));
+    // }
 }

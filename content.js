@@ -22,5 +22,13 @@ window.addEventListener('load', function () {
           elem.click();
         }
         sendResponse({farewell: "goodbye"});
+      if (request.greeting == "next")
+        var elem = document.querySelector('[data-uia="next-episode-seamless-button"]');
+        console.log({elem})
+        if (elem) {
+          console.log('Next!');
+          elem.click();
+        }
+        sendResponse({farewell: "goodbye"});
     });
 });
